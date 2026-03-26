@@ -1,0 +1,35 @@
+.gk-surface :is(button, [type='button'], [type='submit'], [type='reset']):not(:disabled) {
+    cursor: pointer;
+}
+
+.gk-surface [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+}
+
+.gk-surface a[href]:not([href='']):not([href='#']) {
+    cursor: pointer;
+}
+
+.gk-surface summary {
+    cursor: pointer;
+}
+
+.gk-surface select:not(:disabled) {
+    cursor: pointer;
+}
+
+.gk-surface input[type='checkbox'],
+.gk-surface input[type='radio'] {
+    cursor: pointer;
+}
+
+.gk-surface .gk-cell--hit {
+    cursor: pointer;
+}
+
+.gk-surface button:disabled,
+.gk-surface [type='submit']:disabled,
+.gk-surface [type='button']:disabled,
+.gk-surface [type='reset']:disabled {
+    cursor: not-allowed;
+}

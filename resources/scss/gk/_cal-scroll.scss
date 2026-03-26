@@ -1,0 +1,26 @@
+.gk-scroll {
+    width: 100%;
+    max-height: 80vh;
+    overflow-x: auto;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-gutter: stable;
+    cursor: grab;
+    scrollbar-color: color-mix(in oklab, var(--gk-muted) 40%, var(--gk-border)) transparent;
+    scrollbar-width: thin;
+}
+
+.gk-scroll--dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.gk-scroll::-webkit-scrollbar {
+    height: 11px;
+    width: 11px;
+}
+
+.gk-scroll::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--gk-muted) 40%, var(--gk-border));
+    border-radius: 999px;
+}

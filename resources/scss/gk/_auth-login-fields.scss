@@ -1,0 +1,42 @@
+.gk-auth-field {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.gk-auth-label {
+    font-size: var(--gk-text-xs);
+    font-weight: var(--gk-weight-medium);
+    color: var(--gk-muted);
+}
+
+.gk-auth-input {
+    width: 100%;
+    height: 2.75rem;
+    border: 1px solid var(--gk-border);
+    border-radius: 0.5rem;
+    padding: 0 0.75rem;
+    font-size: var(--gk-text-base);
+    font-weight: var(--gk-weight-normal);
+    background: var(--gk-card);
+    color: var(--gk-fg);
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s,
+        background 0.15s;
+}
+
+.gk-auth-input:focus {
+    outline: none;
+    border-color: var(--gk-brand);
+    box-shadow: 0 0 0 3px var(--gk-brand-ring);
+    background: var(--gk-brand-surface);
+}
+
+.gk-auth-input--err {
+    border-color: #dc2626;
+}
+
+.gk-auth-input--err:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}

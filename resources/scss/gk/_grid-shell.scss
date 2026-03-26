@@ -1,0 +1,47 @@
+.gk-scroll {
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--gk-grid-line);
+    border-radius: 0.5rem;
+    background: var(--gk-card);
+}
+
+.gk-table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: inherit;
+    font-weight: var(--gk-weight-normal);
+}
+
+.gk-th {
+    font-weight: var(--gk-weight-semibold);
+    vertical-align: bottom;
+}
+
+.gk-th,
+.gk-td {
+    border-bottom: 1px solid var(--gk-grid-line);
+    border-right: 1px solid var(--gk-grid-line);
+    padding: 3px 6px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.gk-table thead .gk-th {
+    border-top: 1px solid var(--gk-grid-line);
+}
+
+.gk-sticky-col {
+    position: sticky;
+    left: 0;
+    z-index: 4;
+    background: var(--gk-card);
+    text-align: left;
+    min-width: 8.5rem;
+    border-left: 1px solid var(--gk-grid-line);
+}
+
+thead .gk-sticky-col {
+    z-index: 5;
+}

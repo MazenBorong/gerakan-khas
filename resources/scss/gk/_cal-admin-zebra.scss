@@ -1,0 +1,29 @@
+.gk-cal-page--admin tbody tr:nth-child(even) .gk-td {
+    background: color-mix(in oklab, var(--gk-bg) 50%, var(--gk-card));
+}
+
+.gk-cal-page--admin tbody tr:nth-child(even) .gk-cell--wfh {
+    background: var(--gk-wfh);
+}
+
+.gk-cal-page--admin tbody tr:nth-child(even) .gk-cell--leave {
+    background: var(--gk-leave);
+}
+
+.gk-cal-page--admin tbody tr:nth-child(even) .gk-cell--sl {
+    background: var(--gk-sl);
+}
+
+.gk-cal-page--admin tbody tr:nth-child(even) .gk-cell--last {
+    background: var(--gk-last);
+}
+
+.gk-cal-page--admin tbody tr:nth-child(even) .gk-cell--off {
+    background: var(--gk-off);
+    color: var(--gk-muted);
+}
+
+.gk-cal-page--admin tbody tr:nth-child(even) .gk-sticky-col {
+    background: color-mix(in oklab, var(--gk-bg) 35%, var(--gk-card));
+    box-shadow: 1px 0 0 var(--gk-border);
+}

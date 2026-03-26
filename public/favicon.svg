@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Gerakan Khas">
+    <defs>
+        <linearGradient id="gk-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5a4d8f"/>
+            <stop offset="100%" stop-color="#524583"/>
+        </linearGradient>
+    </defs>
+    <rect width="32" height="32" rx="7" fill="url(#gk-bg)"/>
+    <text x="16" y="22" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff" letter-spacing="-0.02em">GK</text>
+</svg>

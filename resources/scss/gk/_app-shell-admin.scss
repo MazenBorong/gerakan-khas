@@ -1,0 +1,49 @@
+.gk-admin {
+    margin: 0 auto;
+    max-width: 56rem;
+    padding: 1rem 1.25rem 2rem;
+}
+
+.gk-admin__title {
+    font-size: var(--gk-text-xl);
+    font-weight: var(--gk-weight-bold);
+    line-height: var(--gk-leading-tight);
+    letter-spacing: var(--gk-tracking-tight);
+    margin: 0 0 1rem;
+}
+
+.gk-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--gk-border);
+    border-radius: 0.5rem;
+}
+
+.gk-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--gk-text-base);
+    font-weight: var(--gk-weight-normal);
+}
+
+.gk-data-table thead th {
+    font-weight: var(--gk-weight-semibold);
+    font-size: var(--gk-text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--gk-muted);
+}
+
+.gk-data-table th,
+.gk-data-table td {
+    border-bottom: 1px solid var(--gk-border);
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+}
+
+.gk-data-table select {
+    border-radius: 0.35rem;
+    border: 1px solid var(--gk-border);
+    padding: 0.25rem 0.35rem;
+    background: var(--gk-card);
+}

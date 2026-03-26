@@ -1,0 +1,24 @@
+.gk-dash-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+    gap: 0.65rem;
+}
+
+.gk-dash-stat {
+    border: 1px solid var(--gk-border);
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    background: var(--gk-card);
+}
+
+.gk-dash-stat__val {
+    font-size: var(--gk-text-xl);
+    font-weight: var(--gk-weight-bold);
+    line-height: var(--gk-leading-tight);
+}
+
+.gk-dash-stat__lab {
+    margin-top: 0.2rem;
+    font-size: var(--gk-text-xs);
+    color: var(--gk-muted);
+}

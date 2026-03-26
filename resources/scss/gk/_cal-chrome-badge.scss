@@ -1,0 +1,10 @@
+.gk-cal-chrome__badge {
+    display: inline-block;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--gk-border);
+    font-size: var(--gk-text-xs);
+    font-weight: var(--gk-weight-semibold);
+    color: var(--gk-muted);
+    background: color-mix(in oklab, var(--gk-bg) 65%, var(--gk-card));
+}

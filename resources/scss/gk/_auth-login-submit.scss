@@ -1,0 +1,35 @@
+.gk-auth-submit {
+    width: 100%;
+    height: 2.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--gk-brand);
+    color: #fff;
+    font-size: var(--gk-text-base);
+    font-weight: var(--gk-weight-semibold);
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+@media (min-width: 400px) {
+    .gk-auth-submit {
+        width: auto;
+        min-width: 7.5rem;
+    }
+}
+
+.gk-auth-submit:hover {
+    background: var(--gk-brand-hover);
+}
+
+.gk-auth-submit:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--gk-brand-ring);
+}
+
+.gk-auth-err {
+    font-size: var(--gk-text-xs);
+    font-weight: var(--gk-weight-medium);
+    color: #b91c1c;
+}

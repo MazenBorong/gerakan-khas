@@ -1,0 +1,28 @@
+.gk-cal-chrome__side {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gk-cal-chrome__seg {
+    display: inline-flex;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gk-border);
+    background: var(--gk-bg);
+    padding: 0.2rem;
+}
+
+.gk-cal-chrome__seg span {
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.35rem;
+    font-size: var(--gk-text-xs);
+    font-weight: var(--gk-weight-medium);
+    color: var(--gk-muted);
+}
+
+.gk-cal-chrome__seg span.is-active {
+    background: var(--gk-card);
+    color: var(--gk-fg);
+    box-shadow: 0 1px 2px color-mix(in oklab, var(--gk-fg) 7%, transparent);
+}

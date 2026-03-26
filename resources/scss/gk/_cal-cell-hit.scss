@@ -1,0 +1,31 @@
+.gk-cell--hit {
+    cursor: pointer;
+    transition: filter 0.12s ease, box-shadow 0.12s ease;
+}
+
+.gk-cell--hit:hover {
+    filter: brightness(0.97);
+}
+
+.gk-cell--hit:active {
+    filter: brightness(0.93);
+}
+
+.gk-cell--nohit {
+    cursor: default;
+}
+
+@media (max-width: 639px) {
+    .gk-th,
+    .gk-td {
+        padding: 3px 4px;
+    }
+
+    .gk-td.gk-cell {
+        padding: 6px 8px;
+    }
+
+    .gk-sticky-col {
+        min-width: 6.75rem;
+    }
+}

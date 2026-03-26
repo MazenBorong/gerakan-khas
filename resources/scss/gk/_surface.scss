@@ -1,0 +1,28 @@
+@use 'tokens';
+
+html {
+    color-scheme: light only;
+}
+
+.gk-surface {
+    font-family: var(--gk-font-sans);
+    font-size: var(--gk-text-base);
+    font-weight: var(--gk-weight-normal);
+    line-height: var(--gk-leading-normal);
+    background: var(--gk-bg);
+    color: var(--gk-fg);
+}
+
+.gk-link {
+    font-size: var(--gk-text-base);
+    font-weight: var(--gk-weight-medium);
+    color: var(--gk-fg);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.gk-input {
+    background: var(--gk-card);
+    border-color: var(--gk-border);
+    color: var(--gk-fg);
+}

@@ -1,0 +1,28 @@
+.gk-auth-pass-track {
+    position: relative;
+}
+
+.gk-auth-pass-track .gk-auth-input {
+    padding-right: 2.5rem;
+}
+
+.gk-auth-eye {
+    position: absolute;
+    top: 50%;
+    right: 0.35rem;
+    transform: translateY(-50%);
+    display: inline-flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.35rem;
+    background: transparent;
+    color: var(--gk-brand);
+    cursor: pointer;
+}
+
+.gk-auth-eye:hover {
+    background: color-mix(in oklab, var(--gk-brand-muted) 28%, transparent);
+}

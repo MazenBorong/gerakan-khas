@@ -1,0 +1,37 @@
+.gk-cal-chrome {
+    margin: 0;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid var(--gk-border);
+    background: transparent;
+}
+
+.gk-cal-chrome__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem 1.25rem;
+}
+
+.gk-cal-chrome__lead {
+    min-width: 0;
+    flex: 1 1 14rem;
+}
+
+.gk-cal-chrome__title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.5rem;
+    margin: 0 0 0.2rem;
+    font-size: var(--gk-text-xl);
+    font-weight: var(--gk-weight-bold);
+    letter-spacing: var(--gk-tracking-tight);
+    line-height: var(--gk-leading-tight);
+}
+
+.gk-cal-chrome__meta {
+    margin: 0;
+    font-size: var(--gk-text-xs);
+    color: var(--gk-muted);
+}

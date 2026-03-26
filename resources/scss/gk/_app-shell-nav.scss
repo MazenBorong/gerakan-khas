@@ -1,0 +1,53 @@
+.gk-main {
+    min-height: calc(100dvh - 3.5rem);
+}
+
+.gk-appnav {
+    background: color-mix(in oklab, var(--gk-card) 96%, var(--gk-bg));
+    border-color: var(--gk-border);
+}
+
+.gk-appnav__link {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.375rem;
+    padding: 0.4rem 0.65rem;
+    font-size: var(--gk-text-base);
+    font-weight: var(--gk-weight-medium);
+    color: var(--gk-muted);
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.gk-appnav__link:hover {
+    background: var(--gk-brand-surface);
+    color: var(--gk-fg);
+}
+
+.gk-appnav__link--active {
+    background: var(--gk-brand-surface);
+    color: var(--gk-brand);
+    font-weight: var(--gk-weight-semibold);
+}
+
+.gk-appnav__link:focus-visible {
+    outline: 2px solid var(--gk-brand-muted);
+    outline-offset: 2px;
+}
+
+.gk-appnav__user {
+    color: var(--gk-muted);
+}
+
+.gk-appnav__user-name {
+    font-weight: var(--gk-weight-semibold);
+    color: var(--gk-fg);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gk-appnav__user-role {
+    font-weight: var(--gk-weight-medium);
+    color: var(--gk-brand);
+}

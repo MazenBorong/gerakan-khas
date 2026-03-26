@@ -1,0 +1,50 @@
+.gk-table-wrap--white {
+    background: #fff;
+}
+
+.gk-table-wrap--white .gk-data-table thead th {
+    background: #fff;
+}
+
+.gk-table-wrap--white .gk-data-table tbody td {
+    background: #fff;
+}
+
+.gk-data-table--users {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.gk-data-table--users col.gk-col-actions {
+    width: 5.75rem;
+}
+
+.gk-data-table--users th:nth-child(4),
+.gk-data-table--users td:nth-child(4) {
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.gk-data-table--users th:last-child,
+.gk-data-table--users td:last-child {
+    min-width: 5.75rem;
+    width: 5.75rem;
+    max-width: 5.75rem;
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: right;
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    box-shadow: -6px 0 10px -8px color-mix(in oklab, var(--gk-fg) 18%, transparent);
+}
+
+.gk-data-table--users thead th:last-child {
+    z-index: 2;
+}
+
+.gk-table-wrap--white .gk-data-table--users td:last-child,
+.gk-table-wrap--white .gk-data-table--users thead th:last-child {
+    background: #fff;
+}

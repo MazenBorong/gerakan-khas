@@ -1,0 +1,34 @@
+:root {
+    color-scheme: light only;
+    --gk-font-sans: "Poppins", system-ui, sans-serif;
+    --gk-text-xs: 0.75rem;
+    --gk-text-base: 0.875rem;
+    --gk-text-lg: 1rem;
+    --gk-text-xl: 1.125rem;
+    --gk-text-2xl: 1.5rem;
+    --gk-weight-normal: 400;
+    --gk-weight-medium: 500;
+    --gk-weight-semibold: 600;
+    --gk-weight-bold: 700;
+    --gk-weight-extrabold: 800;
+    --gk-leading-normal: 1.5;
+    --gk-leading-tight: 1.25;
+    --gk-tracking-tight: -0.02em;
+    --gk-brand: #524583;
+    --gk-brand-muted: #bcb3df;
+    --gk-brand-ring: color-mix(in oklab, var(--gk-brand-muted) 45%, transparent);
+    --gk-brand-surface: color-mix(in oklab, var(--gk-brand-muted) 22%, white);
+    --gk-brand-hover: color-mix(in oklab, var(--gk-brand) 88%, black);
+    --gk-bg: #fafafa;
+    --gk-fg: #09090b;
+    --gk-muted: #71717a;
+    --gk-border: #e4e4e7;
+    --gk-grid-line: #e5e7eb;
+    --gk-card: #ffffff;
+    --gk-ring: #18181b;
+    --gk-wfh: rgba(251, 146, 60, 0.32);
+    --gk-leave: rgba(59, 130, 246, 0.24);
+    --gk-sl: rgba(168, 85, 247, 0.22);
+    --gk-last: rgba(34, 197, 94, 0.24);
+    --gk-off: rgba(113, 113, 122, 0.14);
+}

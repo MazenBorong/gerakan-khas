@@ -1,0 +1,44 @@
+.gk-cell-pill {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: var(--gk-weight-semibold);
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.gk-cell-pill--wfh {
+    background: color-mix(in oklab, var(--gk-wfh) 55%, white);
+    border-color: color-mix(in oklab, #fb923c 35%, var(--gk-border));
+    color: #9a3412;
+}
+
+.gk-cell-pill--leave {
+    background: color-mix(in oklab, var(--gk-leave) 50%, white);
+    border-color: color-mix(in oklab, #3b82f6 30%, var(--gk-border));
+    color: #1d4ed8;
+}
+
+.gk-cell-pill--sl {
+    background: color-mix(in oklab, var(--gk-sl) 50%, white);
+    border-color: color-mix(in oklab, #a855f7 30%, var(--gk-border));
+    color: #6b21a8;
+}
+
+.gk-cell-pill--last {
+    background: color-mix(in oklab, var(--gk-last) 50%, white);
+    border-color: color-mix(in oklab, #22c55e 30%, var(--gk-border));
+    color: #166534;
+}
+
+.gk-cell-pill--off {
+    background: color-mix(in oklab, var(--gk-off) 70%, white);
+    border-color: var(--gk-border);
+    color: var(--gk-muted);
+}

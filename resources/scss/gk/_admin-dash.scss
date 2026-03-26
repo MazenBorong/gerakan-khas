@@ -1,0 +1,45 @@
+.gk-admin--dash {
+    max-width: 52rem;
+}
+
+.gk-dash-asof {
+    margin: -0.35rem 0 1.25rem;
+    font-size: var(--gk-text-base);
+    color: var(--gk-muted);
+}
+
+.gk-dash-section {
+    margin-bottom: 1.75rem;
+}
+
+.gk-dash-h {
+    margin: 0 0 0.5rem;
+    font-size: var(--gk-text-lg);
+    font-weight: var(--gk-weight-semibold);
+    letter-spacing: var(--gk-tracking-tight);
+}
+
+.gk-dash-sub {
+    margin: 0 0 0.65rem;
+    font-size: var(--gk-text-xs);
+    color: var(--gk-muted);
+}
+
+.gk-dash-empty {
+    margin: 0;
+    font-size: var(--gk-text-base);
+    color: var(--gk-muted);
+}
+
+.gk-dash-ph {
+    margin: 0;
+    font-size: var(--gk-text-base);
+}
+
+.gk-dash-links {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.35rem;
+    font-size: var(--gk-text-base);
+}

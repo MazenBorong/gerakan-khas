@@ -1,0 +1,43 @@
+.gk-auth-wrap {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(
+        165deg,
+        color-mix(in oklab, var(--gk-brand-muted) 16%, white) 0%,
+        var(--gk-bg) 42%
+    );
+}
+
+.gk-auth-card {
+    box-sizing: border-box;
+    width: min(100%, 37.25rem);
+    border-radius: 0.75rem;
+    border: 1px solid var(--gk-border);
+    background: var(--gk-card);
+    padding: clamp(1.25rem, 3vw, 2.25rem) clamp(1.25rem, 4vw, 2.75rem) clamp(1.1rem, 2.5vw, 1.75rem);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.gk-auth-kicker {
+    font-size: var(--gk-text-xs);
+    font-weight: var(--gk-weight-medium);
+    color: var(--gk-muted);
+    margin: 0 0 0.35rem;
+}
+
+.gk-auth-title {
+    font-size: var(--gk-text-2xl);
+    font-weight: var(--gk-weight-bold);
+    letter-spacing: var(--gk-tracking-tight);
+    line-height: var(--gk-leading-tight);
+    color: var(--gk-fg);
+    margin: 0 0 1.25rem;
+}
+
+.gk-auth-form {
+    display: grid;
+    gap: 1rem;
+}

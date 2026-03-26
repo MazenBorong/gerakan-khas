@@ -1,0 +1,20 @@
+.gk-btn {
+    height: 36px;
+    padding: 0 12px;
+    font-family: var(--gk-font-sans);
+    font-size: var(--gk-text-base);
+    font-weight: var(--gk-weight-semibold);
+    letter-spacing: 0.01em;
+}
+
+.gk-btn--primary {
+    background: var(--gk-fg);
+    color: var(--gk-bg);
+}
+
+.gk-btn--ghost {
+    background: transparent;
+    border: 1px solid var(--gk-border);
+    color: var(--gk-fg);
+    font-weight: var(--gk-weight-medium);
+}

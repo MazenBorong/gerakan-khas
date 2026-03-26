@@ -1,0 +1,44 @@
+.gk-cal-th {
+    min-width: 2.35rem;
+    font-size: 14px;
+}
+
+.gk-th.gk-cal-th,
+.gk-th.gk-cal-corner {
+    padding: 6px 8px;
+}
+
+.gk-cal-corner {
+    min-width: 8.5rem;
+}
+
+.gk-cal-dow {
+    display: block;
+    font-size: 14px;
+    font-weight: var(--gk-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--gk-muted);
+    line-height: 1.2;
+}
+
+.gk-cal-dom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.75rem;
+    height: 1.75rem;
+    margin-top: 0.15rem;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: var(--gk-weight-semibold);
+}
+
+.gk-th--today .gk-cal-dow {
+    color: var(--gk-muted);
+}
+
+.gk-th--today .gk-cal-dom {
+    background: var(--gk-brand);
+    color: #fff;
+}

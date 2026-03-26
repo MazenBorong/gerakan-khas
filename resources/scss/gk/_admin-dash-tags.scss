@@ -1,0 +1,27 @@
+.gk-dash-tag {
+    display: inline-block;
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.35rem;
+    font-size: var(--gk-text-xs);
+    font-weight: var(--gk-weight-semibold);
+}
+
+.gk-dash-tag--wfh {
+    background: color-mix(in oklab, var(--gk-wfh) 70%, white);
+    color: #9a3412;
+}
+
+.gk-dash-tag--leave {
+    background: color-mix(in oklab, var(--gk-leave) 70%, white);
+    color: #1d4ed8;
+}
+
+.gk-dash-tag--sl {
+    background: color-mix(in oklab, var(--gk-sl) 70%, white);
+    color: #6b21a8;
+}
+
+.gk-dash-tag--last_day {
+    background: color-mix(in oklab, var(--gk-last) 70%, white);
+    color: #166534;
+}

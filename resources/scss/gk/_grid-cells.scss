@@ -1,0 +1,25 @@
+.gk-th--off,
+.gk-cell--off {
+    background: color-mix(in oklab, var(--gk-off) 45%, var(--gk-card));
+    color: var(--gk-muted);
+}
+
+.gk-cell:not(.gk-cell--off) {
+    background: var(--gk-card);
+    border: 1px solid #eee;
+}
+
+.gk-td.gk-cell {
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+.gk-sum-val--wfh {
+    background: color-mix(in oklab, var(--gk-wfh) 55%, var(--gk-card));
+    font-weight: var(--gk-weight-semibold);
+}
+
+.gk-sum-val--leave {
+    background: color-mix(in oklab, var(--gk-leave) 55%, var(--gk-card));
+    font-weight: var(--gk-weight-semibold);
+}
