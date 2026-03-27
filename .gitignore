@@ -2,6 +2,7 @@
 .DS_Store
 .env
 .env.backup
+vercel-import.env
 .env.production
 .phpactor.json
 .phpunit.result.cache
