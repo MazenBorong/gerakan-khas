@@ -36,6 +36,6 @@ require $root.'/vendor/autoload.php';
 $app = require $root.'/bootstrap/app.php';
 $app->make(Kernel::class)->bootstrap();
 
-passthru('php '.escapeshellarg($root.'/artisan').' migrate --force --no-interaction', $code);
+passthru('php '.escapeshellarg($root.'/artisan').' migrate --force --no-interaction --graceful', $code);
 
 exit($code);
