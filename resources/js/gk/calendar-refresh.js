@@ -5,9 +5,9 @@ export async function refreshGrid(root) {
     if (!root?.dataset?.url) {
         return;
     }
-    const start = window.gkLoadingStart;
-    const stop = window.gkLoadingStop;
-    start?.();
+    const loadingEl = document.getElementById('gk-cal-root-loading');
+    loadingEl?.classList.remove('gk-cal-root__loading--hidden');
+    loadingEl?.setAttribute('aria-hidden', 'false');
     try {
         const { data } = await window.axios.get(root.dataset.url, { gkSkipLoading: true });
         mountGrid(root, data);
@@ -18,6 +18,7 @@ export async function refreshGrid(root) {
             e?.response?.data?.message || e?.message || 'Try refreshing the page.',
         );
     } finally {
-        stop?.();
+        loadingEl?.classList.add('gk-cal-root__loading--hidden');
+        loadingEl?.setAttribute('aria-hidden', 'true');
     }
 }

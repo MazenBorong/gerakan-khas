@@ -6,7 +6,37 @@
     font-size: 14px;
 }
 
+.gk-cal-root-shell {
+    position: relative;
+    width: 100%;
+    min-height: min(42vh, 18rem);
+}
+
 .gk-cal-root {
     width: 100%;
     padding-top: 0.5rem;
+}
+
+.gk-cal-root__loading {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: rgb(250 250 250 / 0.92);
+    backdrop-filter: blur(2px);
+}
+
+.gk-cal-root__loading--hidden {
+    display: none !important;
+}
+
+.gk-cal-root__loading-text {
+    margin: 0;
+    font-size: var(--gk-text-base);
+    color: var(--gk-muted);
+    font-weight: var(--gk-weight-medium);
 }

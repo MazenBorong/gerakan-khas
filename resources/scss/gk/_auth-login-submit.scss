@@ -28,6 +28,11 @@
     box-shadow: 0 0 0 3px var(--gk-brand-ring);
 }
 
+.gk-auth-submit:disabled {
+    cursor: wait;
+    opacity: 0.85;
+}
+
 .gk-auth-err {
     font-size: var(--gk-text-xs);
     font-weight: var(--gk-weight-medium);

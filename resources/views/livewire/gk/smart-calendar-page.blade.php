@@ -14,13 +14,19 @@
         :nm="$n->month"
     />
     <x-gk.legend />
-    <div
-        id="gk-root"
-        class="gk-cal-root"
-        data-url="{{ route('gk.api.calendar', ['y' => $year, 'm' => $month]) }}"
-        data-store="{{ route('gk.api.entries.store') }}"
-        data-entries="{{ url('/api/gk/entries') }}"
-        data-year="{{ $year }}"
-        data-month="{{ $month }}"
-    ></div>
+    <div class="gk-cal-root-shell">
+        <div
+            id="gk-root"
+            class="gk-cal-root"
+            data-url="{{ route('gk.api.calendar', ['y' => $year, 'm' => $month]) }}"
+            data-store="{{ route('gk.api.entries.store') }}"
+            data-entries="{{ url('/api/gk/entries') }}"
+            data-year="{{ $year }}"
+            data-month="{{ $month }}"
+        ></div>
+        <div id="gk-cal-root-loading" class="gk-cal-root__loading" aria-hidden="false">
+            <div class="gk-loading-spinner" role="status" aria-label="Loading calendar"></div>
+            <p class="gk-cal-root__loading-text">Loading calendar…</p>
+        </div>
+    </div>
 </div>

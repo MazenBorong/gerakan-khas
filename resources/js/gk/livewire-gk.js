@@ -146,12 +146,26 @@ function gkLoadingInit() {
 // interceptors existed and no spinner would show.
 const { show: gkLoadingShow, hide: gkLoadingHide } = gkLoadingInit();
 
+function gkIsLoginPage() {
+    return Boolean(document.querySelector('[data-gk-login-form]'));
+}
+
 document.addEventListener('livewire:init', () => {
     Livewire.interceptRequest(({ onSend, onFinish, onRedirect }) => {
-        onSend(gkLoadingShow);
-        onFinish(gkLoadingHide);
+        onSend(() => {
+            if (!gkIsLoginPage()) {
+                gkLoadingShow();
+            }
+        });
+        onFinish(() => {
+            if (!gkIsLoginPage()) {
+                gkLoadingHide();
+            }
+        });
         onRedirect(() => {
-            gkLoadingShow();
+            if (!gkIsLoginPage()) {
+                gkLoadingShow();
+            }
         });
     });
     Livewire.on('gk-toast', (payload) => {
