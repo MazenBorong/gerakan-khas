@@ -66,7 +66,9 @@ function gkLoadingInit() {
         window.axios.__gkLoadingInstalled = true;
         window.axios.interceptors.request.use(
             (config) => {
-                show();
+                if (!config.gkSkipLoading) {
+                    show();
+                }
                 return config;
             },
             (error) => {
@@ -76,11 +78,15 @@ function gkLoadingInit() {
         );
         window.axios.interceptors.response.use(
             (response) => {
-                hide();
+                if (!response.config?.gkSkipLoading) {
+                    hide();
+                }
                 return response;
             },
             (error) => {
-                hide();
+                if (!error.config?.gkSkipLoading) {
+                    hide();
+                }
                 return Promise.reject(error);
             },
         );
@@ -135,14 +141,17 @@ function gkLoadingInit() {
     return { show, hide };
 }
 
-document.addEventListener('livewire:init', () => {
-    const { show, hide } = gkLoadingInit();
+// Install overlay + Axios/fetch/navigation hooks as soon as this module runs (before DOMContentLoaded
+// handlers like calendar-boot). If this only ran on `livewire:init`, the calendar could fetch before
+// interceptors existed and no spinner would show.
+const { show: gkLoadingShow, hide: gkLoadingHide } = gkLoadingInit();
 
+document.addEventListener('livewire:init', () => {
     Livewire.interceptRequest(({ onSend, onFinish, onRedirect }) => {
-        onSend(show);
-        onFinish(hide);
+        onSend(gkLoadingShow);
+        onFinish(gkLoadingHide);
         onRedirect(() => {
-            show();
+            gkLoadingShow();
         });
     });
     Livewire.on('gk-toast', (payload) => {
