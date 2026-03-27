@@ -5,7 +5,6 @@ use App\Gk\Http\Controllers\PlanEntryController;
 use App\Livewire\Gk\AdminHolidaysPage;
 use App\Livewire\Gk\AdminHome;
 use App\Livewire\Gk\AdminSettingsPage;
-use App\Livewire\Gk\AdminUserCreate;
 use App\Livewire\Gk\AdminUsersPage;
 use App\Livewire\Gk\CalendarRulesViewPage;
 use App\Livewire\Gk\LoginForm;
@@ -35,7 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware('gk.role:admin')->prefix('gk/admin')->group(function () {
         Route::get('/', AdminHome::class)->name('gk.admin.home');
         Route::get('/users', AdminUsersPage::class)->name('gk.admin.users');
-        Route::get('/users/create', AdminUserCreate::class)->name('gk.admin.users.create');
+        Route::redirect('/users/create', '/gk/admin/users?create=1', 301);
         Route::get('/holidays', AdminHolidaysPage::class)->name('gk.admin.holidays');
         Route::get('/settings', AdminSettingsPage::class)->name('gk.admin.settings');
     });

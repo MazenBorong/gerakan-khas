@@ -16,7 +16,7 @@
         @endif
         <a class="gk-appnav__link{{ $here('gk.calendar') ? ' gk-appnav__link--active' : '' }}" href="{{ route('gk.calendar') }}">Calendar</a>
         @if ($navRole === 'admin')
-            <a class="gk-appnav__link{{ $here('gk.admin.users', 'gk.admin.users.create') ? ' gk-appnav__link--active' : '' }}" href="{{ route('gk.admin.users') }}">Users</a>
+            <a class="gk-appnav__link{{ $here('gk.admin.users') ? ' gk-appnav__link--active' : '' }}" href="{{ route('gk.admin.users') }}">Users</a>
             <a class="gk-appnav__link{{ $here('gk.admin.holidays') ? ' gk-appnav__link--active' : '' }}" href="{{ route('gk.admin.holidays') }}">Holidays</a>
             <a class="gk-appnav__link{{ $here('gk.admin.settings') ? ' gk-appnav__link--active' : '' }}" href="{{ route('gk.admin.settings') }}">Settings</a>
         @else

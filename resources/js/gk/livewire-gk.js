@@ -1,6 +1,38 @@
 import { gkConfirm, gkPromptConfirm, gkToast } from './swal';
 
+function gkLoadingOverlayEl() {
+    return document.getElementById('gk-loading-overlay');
+}
+
+function gkLoadingInit() {
+    let depth = 0;
+    const el = gkLoadingOverlayEl();
+    if (!el) {
+        return;
+    }
+    const show = () => {
+        depth += 1;
+        if (depth === 1) {
+            el.classList.add('is-active');
+            el.setAttribute('aria-hidden', 'false');
+        }
+    };
+    const hide = () => {
+        depth = Math.max(0, depth - 1);
+        if (depth === 0) {
+            el.classList.remove('is-active');
+            el.setAttribute('aria-hidden', 'true');
+        }
+    };
+
+    Livewire.interceptRequest(({ onSend, onFinish }) => {
+        onSend(show);
+        onFinish(hide);
+    });
+}
+
 document.addEventListener('livewire:init', () => {
+    gkLoadingInit();
     Livewire.on('gk-toast', (payload) => {
         if (!payload || typeof payload !== 'object') {
             return;

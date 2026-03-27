@@ -8,6 +8,7 @@
     @livewireStyles
 </head>
 <body class="gk-surface min-h-dvh antialiased">
+    @include('partials.gk.loading-overlay')
     {{ $slot }}
     @livewireScripts
 </body>

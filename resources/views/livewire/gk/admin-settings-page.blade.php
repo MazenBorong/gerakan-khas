@@ -29,7 +29,7 @@
 
     <div class="mb-8 max-w-xl space-y-4">
         <h2 class="text-base font-semibold text-zinc-900">New user accounts</h2>
-        <p class="text-sm text-zinc-600">Default role when an admin creates a user on the <a class="gk-appnav__link font-medium" href="{{ route('gk.admin.users.create') }}">Add user</a> page.</p>
+        <p class="text-sm text-zinc-600">Default role when an admin creates a user from <a class="gk-appnav__link font-medium" href="{{ route('gk.admin.users', ['create' => 1]) }}">Users → Add user</a>.</p>
         <form class="grid gap-3" wire:submit.prevent="saveUserDefaults">
             <label class="flex flex-col gap-1 text-sm text-zinc-600">
                 Default role
@@ -48,7 +48,7 @@
         <h2 class="mb-2 text-base font-semibold text-zinc-900">Manage accounts</h2>
         <ul class="list-inside list-disc text-sm text-zinc-600">
             <li><a class="gk-appnav__link font-medium" href="{{ route('gk.admin.users') }}">Users</a> — roles and access</li>
-            <li><a class="gk-appnav__link font-medium" href="{{ route('gk.admin.users.create') }}">Add user</a></li>
+            <li><a class="gk-appnav__link font-medium" href="{{ route('gk.admin.users', ['create' => 1]) }}">Add user</a></li>
         </ul>
     </div>
 </div>

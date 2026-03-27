@@ -11,6 +11,7 @@
     @livewireStyles
 </head>
 <body class="gk-surface min-h-dvh antialiased">
+    @include('partials.gk.loading-overlay')
     @include('partials.gk.app-nav', ['navRole' => $navRole ?? 'staff'])
     <main class="gk-main">
         {{ $slot }}
