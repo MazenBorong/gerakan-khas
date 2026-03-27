@@ -12,8 +12,13 @@ use Illuminate\Contracts\Console\Kernel;
  *
  *   php artisan migrate --force
  *
- * To run migrations on deploy, set in Vercel: RUN_MIGRATE_ON_VERCEL=1
+ * To run DB bootstrap on deploy, set in Vercel: RUN_MIGRATE_ON_VERCEL=1
  * (still requires working DB_* + APP_KEY in the Vercel environment.)
+ *
+ * WARNING: this script performs a destructive reset:
+ *   1) migrate:fresh
+ *   2) migrate --seed
+ * This wipes existing data on each deployment.
  */
 $root = dirname(__DIR__);
 
@@ -36,6 +41,11 @@ require $root.'/vendor/autoload.php';
 $app = require $root.'/bootstrap/app.php';
 $app->make(Kernel::class)->bootstrap();
 
-passthru('php '.escapeshellarg($root.'/artisan').' migrate --force --no-interaction --graceful', $code);
+passthru('php '.escapeshellarg($root.'/artisan').' migrate:fresh --force --no-interaction', $code);
+if ($code !== 0) {
+    exit($code);
+}
+
+passthru('php '.escapeshellarg($root.'/artisan').' migrate --force --seed --no-interaction --graceful', $code);
 
 exit($code);
