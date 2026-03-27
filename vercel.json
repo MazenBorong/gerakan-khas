@@ -9,8 +9,8 @@
     },
     "rewrites": [
         {
-               "source": "/gk/api/(.*)",
-                "destination": "/api/lambda.php"
-       }
+            "source": "/(.*)",
+            "destination": "/api/lambda.php"
+        }
     ]
 }
